@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>YouTube Clone</h1>
+        <form method="get" action="/">
+            <input type="text" name="query" placeholder="Search..." value="{{ request.args.get('query', '') }}">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <div class="videos">
+        {% for video in videos %}
+            <div class="video">
+                <a href="{{ url_for('video', video_id=video['id']['videoId']) }}">
+                    <img src="{{ video['snippet']['thumbnails']['medium']['url'] }}" alt="{{ video['snippet']['title'] }}">
+                </a>
+                <h3>{{ video['snippet']['title'] }}</h3>
+                <p>{{ video['snippet']['description'] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
