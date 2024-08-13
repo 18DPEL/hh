@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #FF0000;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header form {
+    margin-top: 1em;
+}
+
+header form input[type="text"] {
+    padding: 0.5em;
+    width: 300px;
+}
+
+header form button {
+    padding: 0.5em 1em;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+}
+
+.video {
+    margin: 1em;
+    width: 300px;
+}
+
+.video img {
+    width: 100%;
+}
+
+.video h3 {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+}
+
+.video p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.video-player {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
